@@ -1,0 +1,136 @@
+AI-Powered Lease Chat with Source Citation
+Upload a PDF or paste document text. View the extracted summary and ask questions with source citations.
+
+How do you want to provide the lease?
+
+
+Upload PDF
+
+
+Paste text
+
+Upload lease PDF
+
+No file chosen
+Drag and drop file here
+Limit 200MB per file • PDF
+Copy of Spring Hill - Nelly's Italian Cafe - Lease (Fully Executed) 01.17.14.pdf
+1.2MB
+Lease summary (structured extraction)
+
+Tenant
+Ryan Hall and Danielle Macca Hall 2030 Sunflower Drive Springhill, TN 3 717 4 615-522-8392 615-587-3950 dmacca88@gmail.com
+
+Landlord
+Sell Family Partners
+
+Lease Start Date
+April I, 2014
+
+Lease End Date
+Last day of fifth full lease year (see Section 2.3)
+
+Rent Amount
+SEE EXHIBIT C based on 17.00 / SF base rental plus 2 SF CAM/ Tax/ Insurance
+
+Renewal Options
+Not specified
+
+Termination Clauses
+Lease may be sooner terminated as provided in the Lease. Eminent domain/condemnation: see Article 29. Termination for default: see default and remedies articles. Termination for violation of Exclusive Use Covenant (Article 15.2).
+
+Security Deposit
+$1,900
+
+Special Provisions
+Exhibits A–F (Site Plan, Design Criteria, Rent Schedule, Lease Plan, Renewal Option, Landlord's Work). Subordination (Art. 8); Estoppel (Art. 8.4); Rules and Regulations (Art. 28).
+
+Premises Address
+5441 Main Street, Suite 4
+
+Permitted Use
+Pizza, Italian, Subs Sit Down and Take Out Restaurant
+
+Rent Commencement Date
+April I, 2014
+
+CAM / Tax / Insurance
+$2 SF CAM/
+
+Advanced Rental
+$1,200(April2014rent)
+
+Lease Term
+Five (5) YEARS (See Section 2.4)
+
+Trade Name
+Nelly's Italian Cafe
+
+Approximate Size (SF)
+1,200 Square Feet (20' X 60") 0. SECURITY DEPOSIT: $1,900
+
+Landlord Address
+Sell Family Partners c/o Turner & Associates Realty, Inc.
+
+Tenant Address
+2030 Sunflower Drive Springhill, TN 3 717 4 615-522-8392 615-587-3950 dmacca88@gmail.com
+
+Guarantor
+of this Lease (any and all such guarantors hereinafter individually referred to as "Guarantor") in an involuntary proceeding under present or future federal bankruptcy laws, or any other applicable federal or state bankruptcy, insolvency or other similar law, or (bb) The appointment of, or consen
+
+Execution Date
+January 17, 2014
+
+Option Notice Period
+—
+
+Option Rent
+—
+
+Insurance Requirements
+—
+
+Assignment / Subletting
+—
+
+Default & Remedies
+—
+
+Parking
+—
+
+Signage
+—
+
+Broker
+—
+
+Ask about the lease
+○ Structured lease summary output
+
+The lease document includes the following key elements:
+
+Parties Involved: The Tenant and the Landlord are referenced, but specific names are not provided in the excerpts.
+
+Term: The specific term of the lease is not mentioned in the excerpts provided.
+
+Lease Condition: The Tenant is taking the space in "AS IS" condition as per Article 52 (Page 19).
+
+Rent and Security Deposit:
+
+Base Rent: While specific amounts are not clearly listed for all terms, a security deposit of $1,900 is mentioned in Section 1.3 (Page 5).
+Advanced Rental: An amount of $1,200 is noted for April 2014 rent (Page 5).
+Additional details about minimum annual rental and adjustments are mentioned in Article 23 (Page 13).
+Permitted Use: The space is designated for use as a Pizza, Italian, Subs Sit Down and Take Out Restaurant (Page 5).
+
+Exhibits: Exhibit A, which is a Site Plan, is included as part of the lease (Page 2, Section 1.3).
+
+Key Articles and Sections:
+
+Article 11 discusses the satisfactory condition of the leased premises and the presumptions of Landlord's compliance (Page 7).
+Article 23 outlines the payments due to the Landlord and conditions regarding lease continuation and default (Pages 12-13).
+Special Conditions: Article 52 specifies that the leased space is accepted "AS IS" by the Tenant (Page 19).
+
+Sources: Page 19, Article 52; Page 2, Section 1.3; Page 18, Article 42; Page 24; Page 12, Article 23, Section 2.3; Page 7, Article 11; Page 13, Article 23
+
+Ask a question about the lease...
