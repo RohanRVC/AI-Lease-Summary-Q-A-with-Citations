@@ -1,8 +1,11 @@
 # Lease Chat App — AI-Powered Chat with Source Citation
 
 Document-aware AI chat: upload a lease PDF, view a structured summary, and ask questions with answers tied to document sources (page and section).
+<img width="1919" height="979" alt="image" src="https://github.com/user-attachments/assets/69e3521e-0c39-433b-80e0-20b46a6a79b8" />
+<img width="1919" height="981" alt="image" src="https://github.com/user-attachments/assets/0ce63b37-90ea-4650-bd03-731adaee4d2d" />
 
 ## Quick start
+
 
 1. **Install dependencies** (from repo root or from `lease_chat_app`):
 
