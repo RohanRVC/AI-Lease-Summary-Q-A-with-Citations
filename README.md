@@ -6,7 +6,6 @@ Document-aware AI chat: upload a lease PDF, view a structured summary, and ask q
 
 ## Quick start
 
-
 1. **Install dependencies** (from repo root or from `lease_chat_app`):
 
    ```bash
@@ -66,20 +65,37 @@ If Tesseract is not installed, the app still works for digital PDFs; scanned pag
 - `chat/` — Prompts and QA chain with citations.
 - `ui/` — Summary display and chat UI.
 
-See `docs/PIPELINE_OVERVIEW.md` for the pipeline and assumptions, and `docs/EDGE_CASES.md` for edge-case analysis and mitigations.
+## Pipeline overview and assumptions
 
-## Edge cases (summary)
+**Flow:** PDF or pasted text → **Ingestion** (load, optional OCR for scanned pages, chunk by page/section with metadata) → **Extraction** (LLM or rule-based fill of lease summary schema) and **Retrieval** (embed chunks, build FAISS index) → **Chat** (user question → top-k retrieval → LLM answer with "Page X, Section Y" citations).
+
+- **Single document:** One lease at a time; no multi-document comparison.
+- **No auth:** App is open to whoever runs it; no user accounts or API keys required for rule-based mode.
+- **LLM optional:** With `OPENAI_API_KEY`, extraction and chat use the configured model (e.g. gpt-4o-mini); without it, extraction uses regex/rule-based parsing and chat prompts for a key.
+- **Embeddings:** Local sentence-transformers (`all-MiniLM-L6-v2`) for retrieval; no extra API for embeddings.
+- **OCR:** Tesseract must be on PATH for scanned PDFs; if missing, only digital PDFs (or pasted text) have full text.
+
+## Edge case analysis
 
 The system is designed to handle:
 
-- Ambiguous or missing fields (derive or "See Exhibit X"; never invent).
-- Conflicting clauses (cite multiple sections).
-- Complex clauses (section-level chunks; summarize with citation).
-- Queries with multiple answers (list each with citation).
-- Very long sections (sub-chunks with same article/section; cite page range).
-- Exhibits not in text (reference main lease text only).
+| Edge case | Mitigation |
+|-----------|------------|
+| **Ambiguous or missing fields** | Derive where possible (e.g. "Fifth full lease year" from commencement date); use "See Exhibit X" when value lives in an exhibit; use "Not specified" when truly absent; never invent. |
+| **Conflicting clauses** | Extraction can list multiple mentions; chat retrieves all relevant chunks and the prompt asks the model to state conflicts and cite each source (e.g. "Section X says …; Section Y says …"). |
+| **Complex or nested clauses** | Chunk by section so one chunk ≈ one section; use overlap for context; prompt LLM to summarize in one sentence and still cite the section. |
+| **Queries with multiple answers** | Use top-k retrieval; prompt: "If multiple provisions apply, list each with its citation." |
+| **Very long sections** | Split long articles into sub-chunks with same `article`/`section` metadata; citation can be "Page 10–11, Article 17." |
+| **Exhibits not in PDF text** | Extraction uses "See Exhibit C" or "Per Section 1.1 K"; chat answers from main lease text and states that exact figures are in the exhibit. |
 
-Details and strategies are in `docs/EDGE_CASES.md`.
+## Limitations and trade-offs
+
+- **Accuracy:** Extraction and answers depend on LLM quality and retrieval; always verify critical terms against the original document.
+- **Cost and rate limits:** LLM calls (extraction + each chat turn) use your OpenAI key; long documents and many questions increase usage.
+- **OCR quality:** Scanned PDFs depend on Tesseract; poor scans or handwriting can yield wrong or missing text.
+- **Single session:** Vector store and summary live in Streamlit session state; refreshing the page or closing the tab loses the document context until you re-upload or re-paste.
+- **Deployment:** Streamlit Cloud does not support Tesseract, so hosted apps typically support only digital PDFs (or paste) unless you add a cloud OCR API.
+- **Citation granularity:** Citations are at page/section level from chunk metadata; exact line or paragraph numbers are not tracked.
 
 ## Evaluation alignment
 
